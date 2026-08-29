@@ -1,0 +1,142 @@
+<section class="contact-page" id="contact">
+  <!-- Decorative Background Elements -->
+  <div class="contact-page__bg-elements" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Contato</span>
+      <h2>Vamos conversar<span class="text-green">.</span></h2>
+      <p>
+        Projetos, colaborações ou produtos digitais. Sua solicitação será processada de forma automática pelo nosso
+        sistema.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Lado esquerdo: Formulário e Infos -->
+      <div class="contact-main">
+        <form class="form contact-form" action="#" method="POST" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="id_name">NOME</label>
+              <input type="text" id="id_name" class="form-control form-control-lg input" placeholder="Seu nome completo"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="id_email">E-MAIL</label>
+              <input type="email" id="id_email" class="form-control form-control-lg input" placeholder="seu@email.com"
+                required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="id_type">TIPO DE PROJETO</label>
+            <select id="id_type" class="form-control form-control-lg input" required>
+              <option value="" disabled selected>Selecione o tipo de projeto</option>
+              <option value="saas">Produto Digital / SaaS</option>
+              <option value="web">Sistema Web</option>
+              <option value="automation">Automação Backend</option>
+              <option value="other">Outro / Consultoria</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="id_message">MENSAGEM</label>
+            <textarea id="id_message" class="form-control form-control-lg input" rows="5"
+              placeholder="Descreva brevemente sua necessidade..." required></textarea>
+          </div>
+
+          <div class="form-actions contact-form-actions">
+            <button type="submit" class="btn btn-outline contact-btn">
+              ENVIAR MENSAGEM
+              <span class="btn-icon-arrow">→</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <span class="contact-info__label">E-MAIL</span>
+            <a href="" class="contact-info__link">mpdev34@gmail.com</a>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__label">SOCIAL</span>
+            <div class="contact-info__social">
+              <a href="https://linkedin.com/in/matheusbatista" class="contact-info__link" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+              <span class="contact-info__separator">/</span>
+              <a href="https://github.com/matheusbatista" class="contact-info__link" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado direito: Visualização da Automação -->
+      <div class="contact-automation">
+        <div class="automation-panel">
+          <div class="automation-header">
+            <div class="automation-status">
+              <span class="status-indicator"></span> AUTOMAÇÃO
+            </div>
+            <span class="automation-badge">● SISTEMA ONLINE</span>
+          </div>
+
+          <div class="automation-workflow">
+
+            <div class="workflow-step is-active">
+              <div class="workflow-step__marker">
+                <span class="workflow-step__num">01</span>
+                <span class="workflow-step__dot"></span>
+              </div>
+              <div class="workflow-step__content">
+                <strong>Solicitação recebida</strong>
+                <p>O formulário envia o payload via POST.</p>
+              </div>
+            </div>
+
+            <div class="workflow-line"></div>
+
+            <div class="workflow-step">
+              <div class="workflow-step__marker">
+                <span class="workflow-step__num">02</span>
+                <span class="workflow-step__dot"></span>
+              </div>
+              <div class="workflow-step__content">
+                <strong>Dados processados</strong>
+                <p>O sistema valida e limpa os inputs.</p>
+              </div>
+            </div>
+
+            <div class="workflow-line"></div>
+
+            <div class="workflow-step">
+              <div class="workflow-step__marker">
+                <span class="workflow-step__num">03</span>
+                <span class="workflow-step__dot"></span>
+              </div>
+              <div class="workflow-step__content">
+                <strong>Contato registrado</strong>
+                <p>As informações são persistidas no DB.</p>
+              </div>
+            </div>
+
+            <div class="workflow-line"></div>
+
+            <div class="workflow-step">
+              <div class="workflow-step__marker">
+                <span class="workflow-step__num">04</span>
+                <span class="workflow-step__dot"></span>
+              </div>
+              <div class="workflow-step__content">
+                <strong>Confirmação enviada</strong>
+                <p>Disparo automático de e-mail ao usuário.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,275 @@
+{% load static %}
+
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">Serviços</span>
+
+      <h2>Soluções que entrego<span style="color: var(--color-green)">.</span></h2>
+
+      <p>
+        Desenvolvimento de sistemas web, SaaS e produtos digitais
+        com foco em arquitetura, performance e experiência.
+      </p>
+    </div>
+
+    <div class="service-card">
+
+      <div class="service-card__content">
+
+        <span class="service-status">
+          Disponível para novos projetos
+        </span>
+
+        <span class="service-card__number">
+          01 — DESENVOLVIMENTO DE SAAS
+        </span>
+
+        <h3>Desenvolvimento de SaaS</h3>
+
+        <p>
+          Plataformas web completas, com arquitetura escalável,
+          integrações e experiência do usuário.
+        </p>
+
+        <div class="service-stack">
+          <span>Python</span>
+          <span>Django</span>
+          <span>PostgreSQL</span>
+          <span>Cloudinary</span>
+        </div>
+
+        <div class="projects-showcase">
+          <span class="projects-showcase__title">Projetos em Destaque</span>
+          <div class="projects-showcase__grid">
+            
+            <button type="button" class="project-shortcut" data-fitflix-open>
+              <div class="project-shortcut__logo">
+                <img src="{% static 'images/services/fitflix.png' %}" alt="Fitflix">
+              </div>
+              <div class="project-shortcut__info">
+                <strong>Fitflix</strong>
+                <span>Sistema de gestão de treinos</span>
+              </div>
+              <div class="project-shortcut__action">
+                <span class="project-shortcut__arrow">→</span>
+              </div>
+            </button>
+
+            <button type="button" class="project-shortcut" data-nutrix-open>
+              <div class="project-shortcut__logo">
+                <!-- placeholder, assuming same for now -->
+                <img src="{% static 'images/services/nutrix.png' %}" alt="Nutrix">
+              </div>
+              <div class="project-shortcut__info">
+                <strong>Nutrix</strong>
+                <span>Plataforma de prescrição nutricional</span>
+              </div>
+              <div class="project-shortcut__action">
+                <span class="project-shortcut__arrow">→</span>
+              </div>
+            </button>
+
+            <button type="button" class="project-shortcut" data-foundation-open>
+              <div class="project-shortcut__logo">
+                <img src="{% static 'images/services/foundation-infra.png' %}" alt="Foundation">
+              </div>
+              <div class="project-shortcut__info">
+                <strong>Foundation</strong>
+                <span>Infraestrutura e base de desenvolvimento</span>
+              </div>
+              <div class="project-shortcut__action">
+                <span class="project-shortcut__arrow">→</span>
+              </div>
+            </button>
+
+            <button type="button" class="project-shortcut" data-foundation-design-open>
+              <div class="project-shortcut__logo">
+                <img src="{% static 'images/services/foundation-design.png' %}" alt="Foundation Design System">
+              </div>
+              <div class="project-shortcut__info">
+                <strong>Foundation Design</strong>
+                <span>Design System e Tokens</span>
+              </div>
+              <div class="project-shortcut__action">
+                <span class="project-shortcut__arrow">→</span>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Modal do case Fitflix -->
+<div
+  class="case-modal"
+  id="fitflix-modal"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Case Fitflix"
+>
+
+  <div
+    class="case-modal__backdrop"
+    data-fitflix-close
+  ></div>
+
+  <div class="case-modal__content">
+
+    <button
+      type="button"
+      class="case-modal__close"
+      data-fitflix-close
+      aria-label="Fechar case"
+    >
+      ×
+    </button>
+
+    <div class="case-modal__header">
+      <span>CASE / 01</span>
+      <strong>FITFLIX</strong>
+    </div>
+
+    <img
+      src="{% static 'images/services/fitflix.png' %}"
+      alt="Fitflix — sistema de gestão de treinos"
+      class="case-modal__image"
+    >
+
+  </div>
+
+</div>
+
+
+<!-- Modal do case Nutrix -->
+<div
+  class="case-modal"
+  id="nutrix-modal"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Case Nutrix"
+>
+
+  <div
+    class="case-modal__backdrop"
+    data-nutrix-close
+  ></div>
+
+  <div class="case-modal__content">
+
+    <button
+      type="button"
+      class="case-modal__close"
+      data-nutrix-close
+      aria-label="Fechar case"
+    >
+      ×
+    </button>
+
+    <div class="case-modal__header">
+      <span>CASE / 02</span>
+      <strong>NUTRIX</strong>
+    </div>
+
+    <!-- placeholder image for now, can be updated later when nutrix.png is available -->
+    <img
+      src="{% static 'images/services/nutrix.png' %}"
+      alt="Nutrix — Plataforma de prescrição nutricional"
+      class="case-modal__image"
+    >
+
+  </div>
+
+</div>
+
+<!-- Modal do case Foundation -->
+<div
+  class="case-modal"
+  id="foundation-modal"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Case Foundation"
+>
+
+  <div
+    class="case-modal__backdrop"
+    data-foundation-close
+  ></div>
+
+  <div class="case-modal__content">
+
+    <button
+      type="button"
+      class="case-modal__close"
+      data-foundation-close
+      aria-label="Fechar case"
+    >
+      ×
+    </button>
+
+    <div class="case-modal__header">
+      <span>CASE / 03</span>
+      <strong>FOUNDATION</strong>
+    </div>
+
+    <img
+      src="{% static 'images/services/foundation-infra.png' %}"
+      alt="Foundation — Infraestrutura e base de desenvolvimento"
+      class="case-modal__image"
+    >
+
+  </div>
+
+</div>
+
+<!-- Modal do case Foundation Design System -->
+<div
+  class="case-modal"
+  id="foundation-design-modal"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Case Foundation Design System"
+>
+
+  <div
+    class="case-modal__backdrop"
+    data-foundation-design-close
+  ></div>
+
+  <div class="case-modal__content">
+
+    <button
+      type="button"
+      class="case-modal__close"
+      data-foundation-design-close
+      aria-label="Fechar case"
+    >
+      ×
+    </button>
+
+    <div class="case-modal__header">
+      <span>CASE / 04</span>
+      <strong>DESIGN SYSTEM</strong>
+    </div>
+
+    <img
+      src="{% static 'images/services/foundation-design.png' %}"
+      alt="Foundation Design System"
+      class="case-modal__image"
+    >
+
+  </div>
+
+</div>

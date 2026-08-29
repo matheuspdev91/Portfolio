@@ -1,0 +1,723 @@
+.services {
+  position: relative;
+  z-index: 2;
+  background:
+       radial-gradient(
+        ellipse at 75% 35%,
+        rgba(0, 81, 43, 0.06),
+        transparent 45%
+    ),
+    linear-gradient(
+        135deg,
+        #111313 0%,
+        #0b0d0c 45%,
+        #151817 100%
+    );
+}
+
+.services .section-header {
+  max-width: 720px;
+  margin-bottom: 64px;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: stretch;
+  min-height: 480px;
+}
+
+.service-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-right: clamp(16px, 3vw, 48px);
+}
+
+.service-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-green);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.service-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-green);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.55);
+}
+
+.service-card h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.service-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.service-stack span {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-card__visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  min-height: 380px;
+}
+
+.service-card__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.8) contrast(1.05) brightness(0.85);
+  transition: transform 600ms var(--ease-premium);
+}
+
+.service-card__visual:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 1120px) {
+  .service-card {
+    min-height: 420px;
+  }
+
+  .service-card__content {
+    padding-right: clamp(12px, 2vw, 32px);
+  }
+}
+
+@media (max-width: 860px) {
+  .service-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: auto;
+  }
+
+  .service-card__content {
+    padding-right: 0;
+    order: 1;
+  }
+
+  .service-card__visual {
+    min-height: 280px;
+    order: 2;
+  }
+
+  .service-card h3 {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+  }
+}
+
+@media (max-width: 620px) {
+  .services .section-header {
+    margin-bottom: 40px;
+  }
+
+  .service-card__visual {
+    min-height: 220px;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+
+  .service-stack {
+    gap: 8px;
+  }
+
+  .service-stack span {
+    font-size: 0.68rem;
+    padding: 5px 12px;
+  }
+}
+
+
+
+/* =========================================================
+   SERVICES — CASE VISUAL
+   A imagem do FitFlix aparece somente no modal.
+   ========================================================= */
+
+.service-card__visual {
+  display: none;
+}
+
+.service-card {
+  display: block;
+  min-height: auto;
+}
+
+.service-card__content {
+  max-width: 720px;
+  padding-right: 0;
+}
+
+
+
+/* =========================================================
+   SERVICES — AJUSTE FINAL
+   ========================================================= */
+
+.service-card {
+  display: block;
+  min-height: auto;
+}
+
+.service-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 720px;
+  padding-right: 0;
+}
+
+.service-card__visual {
+  display: none;
+}
+
+
+/* =========================================================
+   FITFLIX CASE MODAL
+   ========================================================= */
+
+.case-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 300ms var(--ease-premium),
+    visibility 300ms var(--ease-premium);
+}
+
+.case-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.case-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.case-modal__content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1100px, 92vw);
+  max-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-modal__image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 85vh;
+
+  object-fit: contain;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.case-modal__close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+
+  z-index: 3;
+
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--color-green);
+  background: var(--color-black);
+  color: var(--color-white);
+
+  font-size: 1.4rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 240ms var(--ease-premium),
+    color 240ms var(--ease-premium);
+}
+
+.case-modal__close:hover {
+  background: var(--color-green);
+  color: var(--color-black);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+  .case-modal {
+    padding: 20px;
+  }
+
+  .case-modal__content {
+    width: 100%;
+  }
+
+  .case-modal__image {
+    max-width: 100%;
+    max-height: 82vh;
+  }
+
+  .case-modal__close {
+    top: -14px;
+    right: -8px;
+  }
+
+}
+
+
+
+/* =========================================================
+   SERVICES — REFINAMENTO VISUAL
+   ========================================================= */
+
+.services {
+  position: relative;
+  padding-top: clamp(120px, 12vw, 180px);
+  padding-bottom: clamp(100px, 10vw, 160px);
+  overflow: hidden;
+
+  /* Subtle layered pearl-black / dark graphite background */
+  background:
+    /* Barely visible elegant green glow on the right edge */
+    radial-gradient(ellipse 70% 90% at 100% 50%,
+      rgba(0, 255, 136, 0.02),
+      transparent 70%),
+    /* Very subtle graphite depth / pearl effect */
+    radial-gradient(circle at 40% 0%,
+      #0e1110 0%,
+      transparent 60%),
+    /* Base pearl black / dark graphite */
+    #080909;
+}
+
+/* Linha técnica discreta da Foundation */
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-line);
+  opacity: .8;
+}
+
+
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.services>.container {
+  position: relative;
+  z-index: 1;
+}
+
+.services .section-header {
+  position: relative;
+  max-width: 760px;
+  margin-bottom: clamp(70px, 8vw, 110px);
+}
+
+.services .section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  color: var(--color-green);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.services .section-tag::before {
+  content: "";
+  width: 38px;
+  height: 1px;
+  background: var(--color-green);
+}
+
+.services .section-header h2 {
+  margin: 0;
+
+  max-width: 700px;
+
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: -.055em;
+}
+
+.services .section-header p {
+  max-width: 650px;
+  margin-top: 28px;
+
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   SERVIÇO PRINCIPAL
+   ========================================================= */
+
+.service-card {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  min-height: auto;
+
+  padding-top: 32px;
+
+  border-top: 1px solid var(--color-line);
+
+  background: transparent;
+}
+
+.service-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: min(100%, 900px);
+  max-width: 900px;
+
+  gap: 22px;
+
+  padding: 0;
+}
+
+
+/* número do serviço */
+
+.service-card__number {
+  order: 1;
+
+  color: var(--color-muted);
+
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+
+/* status */
+
+.service-status {
+  order: 0;
+
+  margin-bottom: 4px;
+}
+
+
+/* título */
+
+.service-card h3 {
+  order: 2;
+
+  margin: 0;
+
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+
+
+/* descrição */
+
+.service-card p {
+  order: 3;
+
+  max-width: 650px;
+
+  margin: 4px 0 4px;
+
+  color: var(--color-muted);
+
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.65;
+}
+
+
+/* tecnologias */
+
+.service-stack {
+  order: 4;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 8px;
+}
+
+.service-stack span {
+  padding: 7px 12px;
+
+  border: 1px solid var(--color-line);
+  border-radius: 2px;
+
+  background: rgba(255, 255, 255, .015);
+
+  color: var(--color-muted);
+
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   PROJETOS EM DESTAQUE (SHORTCUTS)
+   ========================================================= */
+
+.projects-showcase {
+  order: 5;
+  margin-top: 56px;
+  width: 100%;
+}
+
+.projects-showcase__title {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--color-green);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.projects-showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #040504;
+  /* Very dark surface */
+  border: 1px solid rgba(0, 255, 136, 0.15);
+  /* Thin green border */
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 300ms var(--ease-premium),
+    border-color 300ms var(--ease-premium),
+    transform 300ms var(--ease-premium);
+}
+
+.project-shortcut:hover,
+.project-shortcut:focus-visible {
+  background: rgba(0, 255, 136, 0.02);
+  border-color: rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+}
+
+.project-shortcut__logo {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  overflow: hidden;
+}
+
+.project-shortcut__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Since we are using the large mockup, let's just make it look somewhat decent, or it can be replaced with real logos later */
+}
+
+.project-shortcut__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-shortcut__info strong {
+  color: var(--color-white);
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.project-shortcut__info span {
+  color: var(--color-muted);
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+.project-shortcut__action {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  /* Vertical divider */
+  height: 40px;
+}
+
+.project-shortcut__arrow {
+  color: var(--color-green);
+  font-size: 1.2rem;
+  transition: transform 300ms var(--ease-premium);
+}
+
+.project-shortcut:hover .project-shortcut__arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   VISUAL DO CASE — OCULTO POR ENQUANTO
+   ========================================= */
+
+.service-card__visual {
+  display: none;
+}
+
+
+/* ==========
+   TABLET
+   ========*/
+
+@media (max-width: 1120px) {
+  /* Placeholder for future tablet overrides if needed */
+}
+
+@media (max-width: 860px) {
+  .projects-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========
+   MOBILE
+   ========*/
+
+@media (max-width: 620px) {
+
+  .services {
+    padding-top: 110px;
+    padding-bottom: 90px;
+  }
+
+  .services .section-header {
+    margin-bottom: 64px;
+  }
+
+  .services .section-header h2 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .service-card {
+    padding-top: 24px;
+  }
+
+  .service-card h3 {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+  }
+
+  .service-card__cta {
+    width: 100%;
+  }
+}

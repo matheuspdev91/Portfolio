@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contato — Matheus Batista{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/sections/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% include "sections/contact.html" %}
+{% endblock %}

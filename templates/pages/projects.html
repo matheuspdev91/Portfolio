@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Projetos — Matheus Batista{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/sections/project.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "sections/project.html" %}
+{% endblock %}

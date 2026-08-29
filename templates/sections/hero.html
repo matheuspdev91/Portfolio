@@ -1,0 +1,56 @@
+{% load static %}
+
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="hero__side-index" aria-hidden="true">
+    <span>01</span>
+    <i></i>
+    <span>05</span>
+  </div>
+
+  <div class="container hero__container">
+    <div class="hero__intro">
+
+      <div class="hero__capabilities" aria-label="Áreas de atuação">
+        <div class="hero__capability">
+          <span class="hero__capability-icon">□</span>
+          <div>
+            <small>Front-end</small>
+            <p>Interfaces que conectam e geram experiência.</p>
+          </div>
+        </div>
+
+        <div class="hero__capability">
+          <span class="hero__capability-icon">◇</span>
+          <div>
+            <small>Back-end</small>
+            <p>Lógica, performance e escalabilidade.</p>
+          </div>
+        </div>
+
+        <div class="hero__capability">
+          <span class="hero__capability-icon">⌘</span>
+          <div>
+            <small>Sistemas</small>
+            <p>Soluções completas e eficientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-label="Núcleo visual da identidade">
+      <div class="hero__video-wrap">
+        <video class="hero__video" autoplay muted playsinline preload="auto"
+          poster="{% static 'images/hero/hero-nucleo-poster.jpg' %}" aria-hidden="true">
+          <source src="{% static 'videos/hero-nucleo-fitflix.mp4' %}" type="video/mp4">
+        </video>
+        <div class="hero__video-overlay"></div>
+        <div class="hero__video-vignette"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container hero__bottom">
+    <span>© 2026 <b>MATHEUS BATISTA</b></span>
+</section>

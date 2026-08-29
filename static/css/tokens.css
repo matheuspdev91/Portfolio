@@ -1,0 +1,16 @@
+:root {
+  --color-black: #090909;
+  --color-white: #f5f5f5;
+  --color-green: #00ff88;
+  --color-muted: rgba(245, 245, 245, 0.62);
+  --color-soft: rgba(245, 245, 245, 0.12);
+  --color-line: rgba(245, 245, 245, 0.16);
+
+  --font-sans: Inter, "Satoshi", "General Sans", Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --container: min(100% - 48px, 1440px);
+  --header-height: 88px;
+  --space-section: clamp(96px, 12vw, 180px);
+
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}

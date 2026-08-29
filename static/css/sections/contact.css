@@ -1,0 +1,394 @@
+/* =========================================================
+   CONTACT PAGE REFINEMENT
+   ========================================================= */
+
+.contact-page {
+  position: relative;
+  padding-top: clamp(120px, 12vw, 180px);
+  padding-bottom: clamp(100px, 10vw, 160px);
+  overflow: hidden;
+
+  /* Subtle layered pearl-black / dark graphite background */
+  background:
+    radial-gradient(ellipse 80% 80% at 0% 100%, rgba(0, 255, 136, 0.03), transparent 70%),
+    radial-gradient(circle at 40% 0%, #0e1110 0%, transparent 60%),
+    #080909;
+}
+
+.contact-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-line);
+  opacity: .8;
+}
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.contact-page .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-page .section-header {
+  position: relative;
+  max-width: 760px;
+  margin-bottom: clamp(60px, 8vw, 90px);
+}
+
+.contact-page .section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: var(--color-green);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.contact-page .section-tag::before {
+  content: "";
+  width: 38px;
+  height: 1px;
+  background: var(--color-green);
+}
+
+.contact-page .section-header h2 {
+  margin: 0;
+  max-width: 700px;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: -.055em;
+}
+
+.contact-page .section-header p {
+  max-width: 650px;
+  margin-top: 28px;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.65;
+}
+
+/* =========================================================
+   GRID DO CONTATO
+   ========================================================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.contact-form {
+  background: transparent;
+}
+
+.contact-form .form-control {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  border-radius: 6px;
+  transition: border-color 300ms var(--ease-premium), background 300ms var(--ease-premium);
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--color-green);
+  background: rgba(0, 255, 136, 0.02);
+  outline: none;
+}
+
+.contact-form .form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-muted);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: transparent;
+  border: 1px solid var(--color-green);
+  color: var(--color-white);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 300ms var(--ease-premium), color 300ms var(--ease-premium), transform 300ms var(--ease-premium);
+}
+
+.contact-btn .btn-icon-arrow {
+  color: var(--color-green);
+  font-size: 1.2rem;
+  transition: transform 300ms var(--ease-premium);
+}
+
+.contact-btn:hover,
+.contact-btn:focus-visible {
+  background: rgba(0, 255, 136, 0.05);
+  transform: translateY(-2px);
+}
+
+.contact-btn:hover .btn-icon-arrow {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   INFORMAÇÕES DE CONTATO
+   ========================================================= */
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-info__label {
+  color: var(--color-green);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.contact-info__link {
+  color: var(--color-white);
+  font-size: .95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 300ms var(--ease-premium);
+}
+
+.contact-info__link:hover {
+  color: var(--color-green);
+}
+
+.contact-info__social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-info__separator {
+  color: var(--color-muted);
+  font-size: .8rem;
+}
+
+/* =========================================================
+   AUTOMAÇÃO (LADO DIREITO)
+   ========================================================= */
+
+.automation-panel {
+  background: #040504;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-green), transparent);
+  opacity: 0.5;
+}
+
+.automation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.automation-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-white);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-green);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.automation-badge {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  color: var(--color-muted);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+.automation-workflow {
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-step {
+  display: flex;
+  gap: 24px;
+  opacity: 0.5;
+  transition: opacity 300ms ease;
+}
+
+.workflow-step.is-active,
+.workflow-step:hover {
+  opacity: 1;
+}
+
+.workflow-step__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 24px;
+}
+
+.workflow-step__num {
+  font-family: monospace;
+  color: var(--color-muted);
+  font-size: .7rem;
+  letter-spacing: .1em;
+}
+
+.workflow-step.is-active .workflow-step__num {
+  color: var(--color-green);
+}
+
+.workflow-step__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-muted);
+}
+
+.workflow-step.is-active .workflow-step__dot {
+  background: var(--color-green);
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+.workflow-line {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-left: 11px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.workflow-step__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 24px;
+}
+
+.workflow-step__content strong {
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.workflow-step__content p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .automation-panel {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-page {
+    padding-top: 110px;
+    padding-bottom: 90px;
+  }
+
+  .contact-page .section-header {
+    margin-bottom: 48px;
+  }
+
+  .contact-page .section-header h2 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .automation-panel {
+    padding: 24px;
+  }
+}

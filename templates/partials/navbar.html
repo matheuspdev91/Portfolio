@@ -1,0 +1,25 @@
+<header class="site-header" data-header>
+  <nav class="navbar container" aria-label="Navegação principal">
+    <a class="navbar__brand" href="{% url 'home' %}" aria-label="Matheus Batista">MB</a>
+
+    <div class="navbar__section">01</div>
+
+    <button class="navbar__toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar__menu" data-menu>
+      <a class="navbar__link" href="{% url 'about' %}">Sobre</a>
+      <a class="navbar__link" href="{% url 'services' %}">Serviços</a>
+      <a class="navbar__link" href="{% url 'projects' %}">Projetos</a>
+      <a class="navbar__link" href="{% url 'contact' %}">Contato</a>
+
+    </div>
+
+    <div class="navbar__availability">
+      <span>Disponível para trabalhos</span>
+      <i></i>
+    </div>
+  </nav>
+</header>

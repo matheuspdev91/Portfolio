@@ -1,0 +1,64 @@
+.card{
+
+    position:relative;
+
+    background:#111;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    transition:all .35s var(--ease-premium);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(0,255,136,.25);
+
+    box-shadow:
+
+    0 0 0 1px rgba(0,255,136,.08),
+
+    0 30px 60px rgba(0,0,0,.35);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(0,255,136,.25);
+
+    box-shadow:
+
+    0 0 0 1px rgba(0,255,136,.08),
+
+    0 30px 60px rgba(0,0,0,.35);
+
+}
+
+.card__header{
+
+    padding:2rem;
+
+}
+
+.card__header{
+
+    padding:2rem;
+
+}
+
+.card__footer{
+
+    padding:2rem;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+

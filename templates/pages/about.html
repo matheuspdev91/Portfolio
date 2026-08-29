@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Sobre — Matheus Batista{% endblock %}
+
+{% block extra_css %}
+<!-- Loading Foundation Design System as the authoritative source for /sobre/ -->
+<link rel="stylesheet" href="{% static 'abstracts/tokens.css' %}">
+<link rel="stylesheet" href="{% static 'base/reset.css' %}">
+<link rel="stylesheet" href="{% static 'base/base.css' %}">
+<link rel="stylesheet" href="{% static 'layout/container.css' %}">
+<link rel="stylesheet" href="{% static 'layout/grid.css' %}">
+<link rel="stylesheet" href="{% static 'components/hero.css' %}">
+<link rel="stylesheet" href="{% static 'components/cards.css' %}">
+<link rel="stylesheet" href="{% static 'css/sections/about.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "sections/about.html" %}
+{% endblock %}
