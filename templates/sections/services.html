@@ -43,7 +43,7 @@
         <div class="projects-showcase">
           <span class="projects-showcase__title">Projetos em Destaque</span>
           <div class="projects-showcase__grid">
-            
+
             <button type="button" class="project-shortcut" data-fitflix-open>
               <div class="project-shortcut__logo">
                 <img src="{% static 'images/services/fitflix.png' %}" alt="Fitflix">
@@ -97,6 +97,60 @@
               </div>
             </button>
 
+            <a class="project-shortcut" href="https://jhony-maura-rebuild.vercel.app/" target="_blank"
+              rel="noopener noreferrer">
+
+              <div class="project-shortcut__logo">
+                <img src="{% static 'images/services/jhony-maura.png' %}" alt="Jhony & Maura">
+              </div>
+
+              <div class="project-shortcut__info">
+                <strong>Jhony &amp; Maura</strong>
+                <span>Landing page para eventos e música</span>
+              </div>
+
+              <div class="project-shortcut__action">
+                <span class="project-shortcut__arrow">→</span>
+              </div>
+
+            </a>
+
+            <a class="project-shortcut" href="https://florisbela-perfumaria.vercel.app/" target="_blank"
+              rel="noopener noreferrer">
+
+              <div class="project-shortcut__logo">
+                <img src="{% static 'images/services/florisbela-perfumaria.png' %}" alt="Florisbela Perfumaria">
+              </div>
+
+              <div class="project-shortcut__info">
+                <strong>Florisbela Perfumaria</strong>
+                <span>Landing page premium para perfumaria</span>
+              </div>
+
+              <div class="project-shortcut__action">
+                <span class="project-shortcut__arrow">→</span>
+              </div>
+
+            </a>
+
+            <a class="project-shortcut" href="https://content-flow-hazel.vercel.app/" target="_blank"
+              rel="noopener noreferrer">
+
+              <div class="project-shortcut__logo">
+                <img src="{% static 'images/services/contentflow.png' %}" alt="ContentFlow">
+              </div>
+
+              <div class="project-shortcut__info">
+                <strong>ContentFlow</strong>
+                <span>SaaS de automação e conteúdo com IA</span>
+              </div>
+
+              <div class="project-shortcut__action">
+                <span class="project-shortcut__arrow">→</span>
+              </div>
+
+            </a>
+
           </div>
         </div>
 
@@ -109,28 +163,13 @@
 
 
 <!-- Modal do case Fitflix -->
-<div
-  class="case-modal"
-  id="fitflix-modal"
-  aria-hidden="true"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Case Fitflix"
->
+<div class="case-modal" id="fitflix-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Case Fitflix">
 
-  <div
-    class="case-modal__backdrop"
-    data-fitflix-close
-  ></div>
+  <div class="case-modal__backdrop" data-fitflix-close></div>
 
   <div class="case-modal__content">
 
-    <button
-      type="button"
-      class="case-modal__close"
-      data-fitflix-close
-      aria-label="Fechar case"
-    >
+    <button type="button" class="case-modal__close" data-fitflix-close aria-label="Fechar case">
       ×
     </button>
 
@@ -139,11 +178,8 @@
       <strong>FITFLIX</strong>
     </div>
 
-    <img
-      src="{% static 'images/services/fitflix.png' %}"
-      alt="Fitflix — sistema de gestão de treinos"
-      class="case-modal__image"
-    >
+    <img src="{% static 'images/services/fitflix.png' %}" alt="Fitflix — sistema de gestão de treinos"
+      class="case-modal__image">
 
   </div>
 
@@ -151,28 +187,13 @@
 
 
 <!-- Modal do case Nutrix -->
-<div
-  class="case-modal"
-  id="nutrix-modal"
-  aria-hidden="true"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Case Nutrix"
->
+<div class="case-modal" id="nutrix-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Case Nutrix">
 
-  <div
-    class="case-modal__backdrop"
-    data-nutrix-close
-  ></div>
+  <div class="case-modal__backdrop" data-nutrix-close></div>
 
   <div class="case-modal__content">
 
-    <button
-      type="button"
-      class="case-modal__close"
-      data-nutrix-close
-      aria-label="Fechar case"
-    >
+    <button type="button" class="case-modal__close" data-nutrix-close aria-label="Fechar case">
       ×
     </button>
 
@@ -182,39 +203,22 @@
     </div>
 
     <!-- placeholder image for now, can be updated later when nutrix.png is available -->
-    <img
-      src="{% static 'images/services/nutrix.png' %}"
-      alt="Nutrix — Plataforma de prescrição nutricional"
-      class="case-modal__image"
-    >
+    <img src="{% static 'images/services/nutrix.png' %}" alt="Nutrix — Plataforma de prescrição nutricional"
+      class="case-modal__image">
 
   </div>
 
 </div>
 
 <!-- Modal do case Foundation -->
-<div
-  class="case-modal"
-  id="foundation-modal"
-  aria-hidden="true"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Case Foundation"
->
+<div class="case-modal" id="foundation-modal" aria-hidden="true" role="dialog" aria-modal="true"
+  aria-label="Case Foundation">
 
-  <div
-    class="case-modal__backdrop"
-    data-foundation-close
-  ></div>
+  <div class="case-modal__backdrop" data-foundation-close></div>
 
   <div class="case-modal__content">
 
-    <button
-      type="button"
-      class="case-modal__close"
-      data-foundation-close
-      aria-label="Fechar case"
-    >
+    <button type="button" class="case-modal__close" data-foundation-close aria-label="Fechar case">
       ×
     </button>
 
@@ -223,39 +227,22 @@
       <strong>FOUNDATION</strong>
     </div>
 
-    <img
-      src="{% static 'images/services/foundation-infra.png' %}"
-      alt="Foundation — Infraestrutura e base de desenvolvimento"
-      class="case-modal__image"
-    >
+    <img src="{% static 'images/services/foundation-infra.png' %}"
+      alt="Foundation — Infraestrutura e base de desenvolvimento" class="case-modal__image">
 
   </div>
 
 </div>
 
 <!-- Modal do case Foundation Design System -->
-<div
-  class="case-modal"
-  id="foundation-design-modal"
-  aria-hidden="true"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Case Foundation Design System"
->
+<div class="case-modal" id="foundation-design-modal" aria-hidden="true" role="dialog" aria-modal="true"
+  aria-label="Case Foundation Design System">
 
-  <div
-    class="case-modal__backdrop"
-    data-foundation-design-close
-  ></div>
+  <div class="case-modal__backdrop" data-foundation-design-close></div>
 
   <div class="case-modal__content">
 
-    <button
-      type="button"
-      class="case-modal__close"
-      data-foundation-design-close
-      aria-label="Fechar case"
-    >
+    <button type="button" class="case-modal__close" data-foundation-design-close aria-label="Fechar case">
       ×
     </button>
 
@@ -264,11 +251,8 @@
       <strong>DESIGN SYSTEM</strong>
     </div>
 
-    <img
-      src="{% static 'images/services/foundation-design.png' %}"
-      alt="Foundation Design System"
-      class="case-modal__image"
-    >
+    <img src="{% static 'images/services/foundation-design.png' %}" alt="Foundation Design System"
+      class="case-modal__image">
 
   </div>
 
