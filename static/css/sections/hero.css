@@ -430,6 +430,20 @@
     border-bottom: 0;
   }
 
+  /*
+   * O vídeo é 16:9. No mobile, o wrapper passa a ter a própria
+   * proporção do vídeo e começa no topo do hero. Assim o contain
+   * não fica centralizando o vídeo dentro de uma área de 100svh,
+   * que era o que criava o enorme vazio acima dele.
+   */
+  .hero__video-wrap {
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    height: 56.25vw;
+    aspect-ratio: 16 / 9;
+  }
+
   .hero__video {
     object-fit: contain;
     object-position: center;
