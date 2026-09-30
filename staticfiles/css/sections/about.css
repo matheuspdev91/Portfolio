@@ -1,0 +1,79 @@
+/* ==========================================================
+   FITFLIX DESIGN SYSTEM
+   PAGE - ABOUT
+========================================================== */
+
+.about-page {
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-20);
+    background-color: var(--color-background);
+}
+
+.about-header {
+    max-width: 800px;
+    margin-bottom: var(--space-16);
+}
+
+.about-tag {
+    display: inline-block;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-4);
+}
+
+.about-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-6);
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+.about-title span {
+    color: var(--color-primary);
+}
+
+.about-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    max-width: 650px;
+}
+
+.about-content-grid {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-12);
+}
+
+.about-section-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+}
+
+.about-section-text {
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-md);
+}
+
+/* Responsividade simples via Foundation Layout Tokens indiretamente */
+@media (max-width: 768px) {
+    .about-page {
+        padding-top: var(--space-12);
+        padding-bottom: var(--space-12);
+    }
+    
+    .about-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .about-subtitle {
+        font-size: var(--font-size-md);
+    }
+}

@@ -1,0 +1,55 @@
+.badge{
+
+    display:inline-flex;
+    align-items:center;
+    gap:.75rem;
+
+    padding:.75rem 1.25rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    color:var(--color-white);
+
+    font-size:.875rem;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    transition:all .35s var(--ease-premium);
+
+}
+
+.badge:hover{
+
+    border-color:rgba(0,255,136,.25);
+
+    transform:translateY(-2px);
+
+}
+
+.badge__dot{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--color-green);
+
+    box-shadow:0 0 12px var(--color-green);
+
+}
+
+.badge--success{
+
+    color:var(--color-green);
+
+}
+
