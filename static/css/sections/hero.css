@@ -256,7 +256,7 @@
   object-fit: cover;
   object-position: center;
   filter: saturate(.92) contrast(1.08) brightness(.78);
-  transform: scale(1.08);
+  transform: scale(1);
 }
 
 .hero__video-overlay {
@@ -405,13 +405,26 @@
     padding-top: 125px;
   }
 
+  .hero__intro {
+    width: 100%;
+    padding-inline: 16px;
+    box-sizing: border-box;
+  }
+
   .hero__title {
-    font-size: clamp(4.2rem, 19vw, 6.8rem);
-    letter-spacing: -.065em;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.8rem, 12vw, 4.8rem);
+    line-height: .84;
+    letter-spacing: -.055em;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .hero__role {
-    font-size: 1rem;
+    max-width: 100%;
+    font-size: clamp(.82rem, 3.8vw, 1rem);
+    line-height: 1.2;
   }
 
   .hero__capabilities {
@@ -430,24 +443,22 @@
     border-bottom: 0;
   }
 
-  /*
-   * O vídeo é 16:9. No mobile, o wrapper passa a ter a própria
-   * proporção do vídeo e começa no topo do hero. Assim o contain
-   * não fica centralizando o vídeo dentro de uma área de 100svh,
-   * que era o que criava o enorme vazio acima dele.
-   */
+  /* Mobile usa o asset vertical 9:16 e ocupa o hero inteiro. */
   .hero__video-wrap {
     top: 0;
-    bottom: auto;
+    bottom: 0;
     width: 100%;
-    height: 56.25vw;
-    aspect-ratio: 16 / 9;
+    height: 100%;
+    aspect-ratio: auto;
   }
 
   .hero__video {
-    object-fit: contain;
-    object-position: center;
-    transform: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.08);
+    transform-origin: center top;
     background: #070807;
   }
 
